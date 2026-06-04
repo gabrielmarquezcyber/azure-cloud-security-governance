@@ -40,8 +40,8 @@ Excessive access increases the risk of unauthorized modification, accidental cha
 ### Evidence
 
 - [RBAC evidence summary](evidence-summary.md#evidence-1-rbac-resource-group-scope).
-- Resource group scope notes.
-- Control mapping entry.
+- [Azure RBAC and resource scope control mapping](control-mapping.md#azure-rbac-and-resource-scope).
+- [Azure RBAC and resource scope control mapping](control-mapping.md#azure-rbac-and-resource-scope).
 
 ### Residual Risk
 
@@ -67,7 +67,7 @@ Cross-department visibility can violate least privilege and complicate audit bou
 
 - [RBAC evidence summary](evidence-summary.md#evidence-1-rbac-resource-group-scope).
 - [Azure Policy Department tag evidence summary](evidence-summary.md#evidence-3-azure-policy-department-tag).
-- Control mapping entry.
+- [Azure RBAC and resource scope control mapping](control-mapping.md#azure-rbac-and-resource-scope) and [Azure Policy tag governance control mapping](control-mapping.md#azure-policy-tag-governance).
 
 ### Residual Risk
 
@@ -93,7 +93,7 @@ Loss of keys or secrets could disrupt applications, recovery processes, encrypti
 ### Evidence
 
 - [Key Vault recovery protection evidence summary](evidence-summary.md#evidence-2-key-vault-soft-delete-and-purge-protection).
-- Control mapping entry.
+- [Azure Key Vault recovery protection control mapping](control-mapping.md#azure-key-vault-recovery-protection).
 
 ### Residual Risk
 
@@ -119,8 +119,8 @@ Unclear backup posture increases business impact from ransomware, accidental del
 ### Evidence
 
 - [Recovery Services backup policy evidence summary](evidence-summary.md#evidence-4-recovery-services-backup-policy).
-- Evidence summary.
-- Control mapping entry.
+- [Evidence summary](evidence-summary.md).
+- [Recovery Services backup governance control mapping](control-mapping.md#recovery-services-backup-governance).
 
 ### Residual Risk
 
@@ -146,7 +146,7 @@ Unowned resources create operational confusion and can delay incident response, 
 ### Evidence
 
 - [Azure Policy Department tag evidence summary](evidence-summary.md#evidence-3-azure-policy-department-tag).
-- Control mapping entry.
+- [Azure Policy tag governance control mapping](control-mapping.md#azure-policy-tag-governance).
 
 ### Residual Risk
 
@@ -166,13 +166,13 @@ Weak evidence makes audit review, incident review, handoffs, and control validat
 
 - Maintain control mapping.
 - Maintain risk register.
-- Maintain evidence summary.
+- Maintain the [evidence summary](evidence-summary.md).
 - Use professional screenshot captions.
 - Keep public evidence focused on the control claim being demonstrated.
 
 ### Evidence
 
-- Repository documentation.
+- [Control mapping](control-mapping.md), [risk register](risk-register.md), and [evidence summary](evidence-summary.md).
 - Published evidence screenshots linked from `docs/evidence-summary.md`.
 
 ### Residual Risk
@@ -198,9 +198,9 @@ Compliance gaps can affect regulated operations, audit readiness, security postu
 
 ### Evidence
 
-- Control mapping.
-- Evidence summary.
-- Risk recommendations.
+- [Control mapping](control-mapping.md).
+- [Evidence summary](evidence-summary.md).
+- Risk recommendations documented in this register.
 
 ### Residual Risk
 
@@ -248,3 +248,4 @@ Future extensions may add:
 - Example KQL queries for governance or identity review.
 - Restore-test evidence or backup job health evidence.
 - More detailed mapping to Microsoft Cloud Security Benchmark.
+
