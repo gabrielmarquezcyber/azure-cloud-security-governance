@@ -1,4 +1,4 @@
-# Azure Cloud Security Governance
+﻿# Azure Cloud Security Governance
 
 ## Project Summary
 
@@ -170,7 +170,7 @@ Future versions may add:
 
 - Example KQL queries for governance-related Azure Activity Logs.
 - Microsoft Sentinel analytic rule concepts.
-- Defender for Cloud regulatory compliance evidence if available and sanitized.
+- Defender for Cloud posture review notes in a future extension.
 - Azure Activity Log evidence review.
 - Additional control mapping to Microsoft Cloud Security Benchmark.
 
@@ -179,3 +179,4 @@ Future versions may add:
 Gabriel Marquez
 
 Cybersecurity portfolio: Azure governance, cloud security controls, detection engineering, vulnerability prioritization, and AI/Web3 security research.
+

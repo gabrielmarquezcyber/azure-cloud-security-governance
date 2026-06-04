@@ -4,9 +4,9 @@
 
 This document summarizes cloud governance and compliance risks identified in the simulated Azure migration scenario.
 
-The register is designed to show audit-defensible risk reasoning, not production risk ownership.
+The register demonstrates structured risk reasoning for Azure governance controls, residual risk, and audit-defensible documentation.
 
-This is a public-safe portfolio artifact for a simulated regulated cloud environment.
+This is a public portfolio artifact for a simulated regulated cloud environment. It does not represent production risk ownership.
 
 ## Risk Summary
 
@@ -17,7 +17,7 @@ This is a public-safe portfolio artifact for a simulated regulated cloud environ
 | R-003 | Permanent deletion of keys or secrets | High | Low-Medium | High | Key Vault soft delete and purge protection | Low-Medium |
 | R-004 | Unverified backup recoverability | High | Medium | High | Recovery Services vault and documented backup policy | Medium |
 | R-005 | Unowned or poorly classified resources | Medium | High | Medium | Azure Policy Department tag enforcement | Low-Medium |
-| R-006 | Weak audit evidence | Medium | Medium | Medium | Evidence summary, control mapping, and documented screenshots | Low |
+| R-006 | Weak audit evidence | Medium | Medium | Medium | Evidence summary, control mapping, and published screenshots | Low |
 | R-007 | Compliance control gaps during migration | High | Medium | High | NIST/FISMA/PCI-oriented control mapping and recommendations | Medium |
 
 ## R-001: Overly Broad Azure Access
@@ -39,13 +39,13 @@ Excessive access increases the risk of unauthorized modification, accidental cha
 
 ### Evidence
 
-- RBAC assignment screenshot, if sanitized and available.
+- [RBAC evidence summary](evidence-summary.md#evidence-1-rbac-resource-group-scope).
 - Resource group scope notes.
 - Control mapping entry.
 
 ### Residual Risk
 
-Medium. Access reviews and identity governance should be repeated over time.
+Medium. Access reviews and identity governance remain recurring operational requirements.
 
 ## R-002: Cross-Department Resource Visibility
 
@@ -65,13 +65,13 @@ Cross-department visibility can violate least privilege and complicate audit bou
 
 ### Evidence
 
-- Resource group organization notes.
-- Department tag policy evidence, if sanitized and available.
-- RBAC notes.
+- [RBAC evidence summary](evidence-summary.md#evidence-1-rbac-resource-group-scope).
+- [Azure Policy Department tag evidence summary](evidence-summary.md#evidence-3-azure-policy-department-tag).
+- Control mapping entry.
 
 ### Residual Risk
 
-Low-Medium. The risk decreases with scoped access and tagging, but resource drift requires ongoing review.
+Low-Medium. Scoped access and ownership tagging reduce exposure, but resource drift still requires review.
 
 ## R-003: Permanent Deletion of Keys or Secrets
 
@@ -86,13 +86,13 @@ Loss of keys or secrets could disrupt applications, recovery processes, encrypti
 ### Mitigation
 
 - Enable Key Vault soft delete.
-- Enable purge protection where appropriate.
+- Enable purge protection.
 - Keep recovery settings documented.
 - Restrict Key Vault administrative access.
 
 ### Evidence
 
-- Key Vault properties screenshot, if sanitized and available.
+- [Key Vault recovery protection evidence summary](evidence-summary.md#evidence-2-key-vault-soft-delete-and-purge-protection).
 - Control mapping entry.
 
 ### Residual Risk
@@ -114,13 +114,13 @@ Unclear backup posture increases business impact from ransomware, accidental del
 - Configure or document a Recovery Services vault.
 - Document backup policy schedule and retention.
 - Align backup design to recovery objectives.
-- Add restore-test evidence in a future version if available.
+- Treat restore testing as a separate validation requirement.
 
 ### Evidence
 
-- Recovery Services vault screenshot, if sanitized and available.
-- Backup policy screenshot, if sanitized and available.
+- [Recovery Services backup policy evidence summary](evidence-summary.md#evidence-4-recovery-services-backup-policy).
 - Evidence summary.
+- Control mapping entry.
 
 ### Residual Risk
 
@@ -145,7 +145,7 @@ Unowned resources create operational confusion and can delay incident response, 
 
 ### Evidence
 
-- Azure Policy tag governance screenshot, if sanitized and available.
+- [Azure Policy Department tag evidence summary](evidence-summary.md#evidence-3-azure-policy-department-tag).
 - Control mapping entry.
 
 ### Residual Risk
@@ -168,16 +168,16 @@ Weak evidence makes audit review, incident review, handoffs, and control validat
 - Maintain risk register.
 - Maintain evidence summary.
 - Use professional screenshot captions.
-- Remove tenant, subscription, user, and raw source identifiers before publishing evidence.
+- Keep public evidence focused on the control claim being demonstrated.
 
 ### Evidence
 
 - Repository documentation.
-- Sanitized screenshots when added.
+- Published evidence screenshots linked from `docs/evidence-summary.md`.
 
 ### Residual Risk
 
-Low. Evidence quality depends on keeping documentation current and only publishing sanitized artifacts.
+Low. Evidence quality depends on keeping documentation current and limiting claims to supported configurations.
 
 ## R-007: Compliance Control Gaps During Migration
 
@@ -194,7 +194,7 @@ Compliance gaps can affect regulated operations, audit readiness, security postu
 - Align implementation themes to NIST SP 800-53 control families.
 - Document PCI/FISMA-oriented governance concerns without claiming certification or authorization.
 - Maintain risk-based remediation notes.
-- Add Defender for Cloud regulatory compliance evidence in a future version if available and sanitized.
+- Treat formal compliance validation as a separate organization-specific process.
 
 ### Evidence
 
@@ -216,7 +216,7 @@ Severity = business impact + likelihood + control maturity
 
 This is not a formal quantitative risk model.
 
-It is intended to demonstrate structured analyst reasoning for a simulated cloud governance scenario.
+It demonstrates structured analyst reasoning for a simulated cloud governance scenario.
 
 ## Operational Use
 
@@ -231,20 +231,19 @@ This risk register supports security operations and governance review by helping
 ## Limitations
 
 - Simulated environment.
-- Public-safe documentation only.
-- No customer data.
+- Public documentation only.
 - No production risk ownership.
 - No formal compliance certification.
 - No formal authorization package.
-- No claim of production Microsoft Sentinel, Defender XDR, or Defender for Cloud operation.
+- No production Microsoft Sentinel, Defender XDR, or Defender for Cloud operation is claimed.
 - Risk ratings are qualitative and scenario-based.
 
-## Future Improvements
+## Potential Extensions
 
-Future versions may add:
+Future extensions may add:
 
-- Sanitized Azure screenshots for each risk area.
-- Defender for Cloud regulatory compliance evidence, if available.
+- Additional Azure evidence for each risk area.
+- Defender for Cloud posture-review documentation.
 - Azure Activity Log review notes.
 - Example KQL queries for governance or identity review.
 - Restore-test evidence or backup job health evidence.

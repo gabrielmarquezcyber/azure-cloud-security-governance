@@ -1,4 +1,4 @@
-# Control Mapping
+﻿# Control Mapping
 
 ## Purpose
 
@@ -151,10 +151,11 @@ This control map supports security operations by connecting Azure configuration 
 - No customer data.
 - No formal compliance certification.
 - No claim of production Sentinel, Defender XDR, or Defender for Cloud operation.
-- Screenshot evidence has been sanitized before upload.
+- Published screenshots are linked from `docs/evidence-summary.md`.
 
 ## Validation Notes
 
-This document is supported by the sanitized screenshots linked from `docs/evidence-summary.md`.
+This document is supported by the published evidence screenshots linked from `docs/evidence-summary.md`.
 
-Claims that refer to a specific role assignment, Key Vault setting, policy assignment, or backup configuration should only remain if the corresponding evidence exists or the claim is clearly framed as simulated design rationale.
+Specific configuration claims are supported by the published screenshots or framed as simulated design rationale.
+

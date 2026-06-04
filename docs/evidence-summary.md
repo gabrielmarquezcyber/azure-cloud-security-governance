@@ -1,40 +1,23 @@
-# Evidence Summary
+﻿# Evidence Summary
 
 ## Purpose
 
-This document defines the public-safe evidence model for the Azure Cloud Security Governance project.
+This document summarizes the published evidence for the Azure Cloud Security Governance project.
 
-The goal is to explain what evidence supports each control area without exposing tenant identifiers, subscription identifiers, personal accounts, raw source context, or unrelated screenshots.
+The evidence supports four control areas: RBAC scope, Key Vault recovery protection, Azure Policy tag governance, and Recovery Services backup policy configuration.
 
-This file should be used as the review checklist before adding or updating images in the repository.
-
-## Evidence Handling Rules
-
-Before any screenshot is uploaded publicly, confirm:
-
-- The image is cropped to the relevant Azure configuration pane.
-- Tenant IDs are removed or not visible.
-- Subscription IDs are removed or not visible.
-- User emails and personal identifiers are removed or not visible.
-- Resource IDs and sensitive names are removed or not visible.
-- Raw source context, instructional text, or unrelated browser content is not visible.
-- Browser bookmarks, chat windows, desktop taskbar, and unrelated tabs are not visible.
-- The screenshot supports a specific claim in this repository.
-- The screenshot has a professional filename.
-- The screenshot has a caption explaining what it proves.
+The screenshots are cropped to the relevant Azure configuration panes and support public review of the simulated Azure governance implementation.
 
 ## Evidence Index
 
-| Evidence File | Control Area | What It Proves | Caption |
-|---|---|---|---|
-| [RBAC resource group scope evidence](../images/rbac-resource-group-scope.png) | RBAC / Least Privilege | Role assignment is scoped to the selected resource group. | Azure RBAC role assignment showing Virtual Machine Contributor access scoped to the selected resource group. |
-| [Key Vault recovery protection evidence](../images/key-vault-soft-delete-purge-protection.png) | Key Management | Key Vault recovery protections are configured. | Azure Key Vault recovery settings showing soft delete enabled and purge protection configured. |
-| [Azure Policy Department tag evidence](../images/azure-policy-department-tag.png) | Policy Governance | Azure Policy is used to require a Department tag and value. | Azure Policy assignment requiring the Department tag and a department-specific value. |
-| [Recovery Services backup policy evidence](../images/recovery-services-backup-policy.png) | Backup and Recovery | Backup policy schedule and retention settings are documented. | Recovery Services backup policy showing daily backup schedule, instant restore retention, and daily retention configuration. |
+| Evidence | Control Area | What It Proves |
+|---|---|---|
+| [RBAC resource group scope evidence](../images/rbac-resource-group-scope.png) | RBAC / Least Privilege | Role assignment is scoped to the selected resource group. |
+| [Key Vault recovery protection evidence](../images/key-vault-soft-delete-purge-protection.png) | Key Management | Key Vault recovery protections are configured. |
+| [Azure Policy Department tag evidence](../images/azure-policy-department-tag.png) | Policy Governance | Azure Policy is used to require a Department tag and value. |
+| [Recovery Services backup policy evidence](../images/recovery-services-backup-policy.png) | Backup and Recovery | Backup policy schedule and retention settings are documented. |
 
 ## Evidence 1: RBAC Resource Group Scope
-
-### Evidence
 
 ![RBAC resource group scope evidence](../images/rbac-resource-group-scope.png)
 
@@ -46,7 +29,7 @@ Access control and least privilege.
 
 ### What It Proves
 
-This evidence shows that Azure access can be scoped to a resource group rather than described as broad tenant-wide access.
+This evidence shows Azure RBAC scoped to a selected resource group rather than broad tenant-wide access.
 
 ### Security Interpretation
 
@@ -58,8 +41,6 @@ This screenshot supports scoped RBAC evidence in a simulated lab environment. It
 
 ## Evidence 2: Key Vault Soft Delete and Purge Protection
 
-### Evidence
-
 ![Key Vault recovery protection evidence](../images/key-vault-soft-delete-purge-protection.png)
 
 *Azure Key Vault recovery settings showing soft delete enabled and purge protection configured.*
@@ -70,7 +51,7 @@ Key management and recovery protection.
 
 ### What It Proves
 
-This evidence shows Key Vault recovery protections such as soft delete and purge protection.
+This evidence shows Key Vault recovery protections, including soft delete and purge protection.
 
 ### Security Interpretation
 
@@ -81,8 +62,6 @@ Key Vault recovery protections reduce the risk of immediate permanent loss of ke
 This screenshot supports recovery-protection configuration evidence. It does not claim production key-management administration.
 
 ## Evidence 3: Azure Policy Department Tag
-
-### Evidence
 
 ![Azure Policy Department tag evidence](../images/azure-policy-department-tag.png)
 
@@ -106,8 +85,6 @@ This screenshot supports policy-governance evidence in a simulated environment. 
 
 ## Evidence 4: Recovery Services Backup Policy
 
-### Evidence
-
 ![Recovery Services backup policy evidence](../images/recovery-services-backup-policy.png)
 
 *Recovery Services backup policy showing daily backup schedule, instant restore retention, and daily retention configuration.*
@@ -128,49 +105,25 @@ Backup policy evidence supports continuity planning, ransomware recovery plannin
 
 This screenshot proves backup policy configuration. It does not prove restore testing or production recovery validation.
 
-## Screenshot Review Checklist
+## Public Evidence Standard
 
-Use this checklist before adding or replacing images:
+The published screenshots are limited to the configuration panes needed to support the stated control claims.
 
-```text
-[ ] No tenant IDs.
-[ ] No subscription IDs.
-[ ] No personal email addresses.
-[ ] No customer data.
-[ ] No raw source context.
-[ ] No unrelated instructional text.
-[ ] No full desktop or taskbar.
-[ ] No unrelated browser tabs.
-[ ] No sensitive resource IDs.
-[ ] Screenshot is cropped to the relevant Azure pane.
-[ ] Filename is professional and descriptive.
-[ ] Screenshot supports a specific claim in README.md or docs/.
-[ ] Caption explains what the screenshot proves.
-```
+The evidence supports review of the simulated Azure governance implementation without unnecessary environment context.
 
-## Public-Safe Evidence Standard
-
-Evidence should support claims without creating unnecessary exposure.
-
-If a screenshot is unclear, overly broad, or difficult to explain, do not upload it.
-
-If a claim cannot be supported by sanitized evidence or public documentation, rewrite the claim as simulated design rationale or remove it.
-
-## Limitations
+## Project Limitations
 
 - Evidence is from a simulated environment.
 - No production tenant evidence is included.
-- No customer evidence is included.
 - No formal compliance certification is claimed.
 - No restore-test completion is claimed.
 - No production Microsoft Sentinel, Defender XDR, or Defender for Cloud operation is claimed.
 
-## Future Evidence Improvements
+## Potential Extensions
 
-Future versions may add:
+Future extensions may add:
 
-- Additional sanitized Azure screenshots if they support specific claims.
-- Defender for Cloud compliance posture screenshots, if available and sanitized.
+- Defender for Cloud posture-review documentation.
 - Azure Activity Log review examples.
 - Example KQL queries for governance-related activity.
 - Backup job health or restore-test evidence.
