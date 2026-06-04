@@ -1,4 +1,4 @@
-﻿# Control Mapping
+# Control Mapping
 
 ## Purpose
 
@@ -35,13 +35,13 @@ Department-scoped access reduces the chance that a user can view, modify, or adm
 
 ### Evidence
 
-Suggested evidence file:
+Evidence file:
 
 ```text
 images/rbac-resource-group-scope.png
 ```
 
-Suggested caption:
+Caption:
 
 ```text
 Department-scoped RBAC assignment showing least-privilege access boundary.
@@ -64,13 +64,13 @@ Key and secret recovery controls help protect availability and recoverability of
 
 ### Evidence
 
-Suggested evidence file:
+Evidence file:
 
 ```text
 images/key-vault-soft-delete-purge-protection.png
 ```
 
-Suggested caption:
+Caption:
 
 ```text
 Azure Key Vault recovery settings showing soft delete and purge protection enabled.
@@ -95,13 +95,13 @@ Tag governance helps analysts and administrators identify resource ownership dur
 
 ### Evidence
 
-Suggested evidence file:
+Evidence file:
 
 ```text
 images/azure-policy-department-tag.png
 ```
 
-Suggested caption:
+Caption:
 
 ```text
 Azure Policy assignment enforcing department tag governance.
@@ -124,13 +124,13 @@ Backup governance supports continuity planning, ransomware recovery, and audit r
 
 ### Evidence
 
-Suggested evidence file:
+Evidence file:
 
 ```text
 images/recovery-services-backup-policy.png
 ```
 
-Suggested caption:
+Caption:
 
 ```text
 Recovery Services backup policy showing configured backup schedule and retention.
@@ -183,10 +183,10 @@ This control map supports security operations by connecting Azure configuration 
 - No customer data.
 - No formal compliance certification.
 - No claim of production Sentinel, Defender XDR, or Defender for Cloud operation.
-- Screenshot evidence should be sanitized before upload.
+- Screenshot evidence has been sanitized before upload.
 
 ## Validation Notes
 
-This document should be reviewed against available screenshots before final image upload.
+This document is supported by the sanitized screenshots linked from `docs/evidence-summary.md`.
 
 Claims that refer to a specific role assignment, Key Vault setting, policy assignment, or backup configuration should only remain if the corresponding evidence exists or the claim is clearly framed as simulated design rationale.

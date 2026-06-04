@@ -1,4 +1,4 @@
-﻿# Azure Cloud Security Governance
+# Azure Cloud Security Governance
 
 ## Project Summary
 
@@ -48,9 +48,9 @@ The implementation focuses on:
 | File | Purpose |
 |---|---|
 | `README.md` | Project overview and implementation summary. |
-| `docs/control-mapping.md` | Maps Azure controls to security and compliance objectives. |
-| `docs/risk-register.md` | Documents key risks, impact, mitigation, and residual risk. |
-| `docs/evidence-summary.md` | Summarizes cleaned evidence artifacts and what each proves. |
+| [`docs/control-mapping.md`](docs/control-mapping.md) | Maps Azure controls to security and compliance objectives. |
+| [`docs/risk-register.md`](docs/risk-register.md) | Documents key risks, impact, mitigation, and residual risk. |
+| [`docs/evidence-summary.md`](docs/evidence-summary.md) | Summarizes sanitized evidence artifacts and what each proves. |
 
 ## Implementation Summary
 
@@ -179,4 +179,3 @@ Future versions may add:
 Gabriel Marquez
 
 Cybersecurity portfolio: Azure governance, cloud security controls, detection engineering, vulnerability prioritization, and AI/Web3 security research.
-
