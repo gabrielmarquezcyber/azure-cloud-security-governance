@@ -35,17 +35,9 @@ Department-scoped access reduces the chance that a user can view, modify, or adm
 
 ### Evidence
 
-Evidence file:
+![RBAC resource group scope evidence](../images/rbac-resource-group-scope.png)
 
-```text
-images/rbac-resource-group-scope.png
-```
-
-Caption:
-
-```text
-Department-scoped RBAC assignment showing least-privilege access boundary.
-```
+*Azure RBAC role assignment showing Virtual Machine Contributor access scoped to the selected resource group.*
 
 ## Azure Key Vault Recovery Protection
 
@@ -64,17 +56,9 @@ Key and secret recovery controls help protect availability and recoverability of
 
 ### Evidence
 
-Evidence file:
+![Key Vault recovery protection evidence](../images/key-vault-soft-delete-purge-protection.png)
 
-```text
-images/key-vault-soft-delete-purge-protection.png
-```
-
-Caption:
-
-```text
-Azure Key Vault recovery settings showing soft delete and purge protection enabled.
-```
+*Azure Key Vault recovery settings showing soft delete enabled and purge protection configured.*
 
 ## Azure Policy Tag Governance
 
@@ -95,17 +79,9 @@ Tag governance helps analysts and administrators identify resource ownership dur
 
 ### Evidence
 
-Evidence file:
+![Azure Policy Department tag evidence](../images/azure-policy-department-tag.png)
 
-```text
-images/azure-policy-department-tag.png
-```
-
-Caption:
-
-```text
-Azure Policy assignment enforcing department tag governance.
-```
+*Azure Policy assignment requiring the Department tag and a department-specific value.*
 
 ## Recovery Services Backup Governance
 
@@ -124,17 +100,9 @@ Backup governance supports continuity planning, ransomware recovery, and audit r
 
 ### Evidence
 
-Evidence file:
+![Recovery Services backup policy evidence](../images/recovery-services-backup-policy.png)
 
-```text
-images/recovery-services-backup-policy.png
-```
-
-Caption:
-
-```text
-Recovery Services backup policy showing configured backup schedule and retention.
-```
+*Recovery Services backup policy showing daily backup schedule, instant restore retention, and daily retention configuration.*
 
 ## NIST SP 800-53 Control Family Alignment
 

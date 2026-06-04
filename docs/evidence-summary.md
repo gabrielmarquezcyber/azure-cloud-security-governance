@@ -1,4 +1,4 @@
-﻿# Evidence Summary
+# Evidence Summary
 
 ## Purpose
 
@@ -27,22 +27,18 @@ Before any screenshot is uploaded publicly, confirm:
 
 | Evidence File | Control Area | What It Proves | Caption |
 |---|---|---|---|
-| `images/rbac-resource-group-scope.png` | RBAC / Least Privilege | Role assignment is scoped to the selected resource group. | Azure RBAC role assignment showing Virtual Machine Contributor access scoped to the selected resource group. |
-| `images/key-vault-soft-delete-purge-protection.png` | Key Management | Key Vault recovery protections are configured. | Azure Key Vault recovery settings showing soft delete enabled and purge protection configured. |
-| `images/azure-policy-department-tag.png` | Policy Governance | Azure Policy is used to require a Department tag and value. | Azure Policy assignment requiring the Department tag and a department-specific value. |
-| `images/recovery-services-backup-policy.png` | Backup and Recovery | Backup policy schedule and retention settings are documented. | Recovery Services backup policy showing daily backup schedule, instant restore retention, and daily retention configuration. |
+| [RBAC resource group scope evidence](../images/rbac-resource-group-scope.png) | RBAC / Least Privilege | Role assignment is scoped to the selected resource group. | Azure RBAC role assignment showing Virtual Machine Contributor access scoped to the selected resource group. |
+| [Key Vault recovery protection evidence](../images/key-vault-soft-delete-purge-protection.png) | Key Management | Key Vault recovery protections are configured. | Azure Key Vault recovery settings showing soft delete enabled and purge protection configured. |
+| [Azure Policy Department tag evidence](../images/azure-policy-department-tag.png) | Policy Governance | Azure Policy is used to require a Department tag and value. | Azure Policy assignment requiring the Department tag and a department-specific value. |
+| [Recovery Services backup policy evidence](../images/recovery-services-backup-policy.png) | Backup and Recovery | Backup policy schedule and retention settings are documented. | Recovery Services backup policy showing daily backup schedule, instant restore retention, and daily retention configuration. |
 
 ## Evidence 1: RBAC Resource Group Scope
 
-### File
-
-```text
-images/rbac-resource-group-scope.png
-```
+### Evidence
 
 ![RBAC resource group scope evidence](../images/rbac-resource-group-scope.png)
 
-Caption: Azure RBAC role assignment showing Virtual Machine Contributor access scoped to the selected resource group.
+*Azure RBAC role assignment showing Virtual Machine Contributor access scoped to the selected resource group.*
 
 ### Control Area
 
@@ -62,15 +58,11 @@ This screenshot supports scoped RBAC evidence in a simulated lab environment. It
 
 ## Evidence 2: Key Vault Soft Delete and Purge Protection
 
-### File
-
-```text
-images/key-vault-soft-delete-purge-protection.png
-```
+### Evidence
 
 ![Key Vault recovery protection evidence](../images/key-vault-soft-delete-purge-protection.png)
 
-Caption: Azure Key Vault recovery settings showing soft delete enabled and purge protection configured.
+*Azure Key Vault recovery settings showing soft delete enabled and purge protection configured.*
 
 ### Control Area
 
@@ -90,15 +82,11 @@ This screenshot supports recovery-protection configuration evidence. It does not
 
 ## Evidence 3: Azure Policy Department Tag
 
-### File
-
-```text
-images/azure-policy-department-tag.png
-```
+### Evidence
 
 ![Azure Policy Department tag evidence](../images/azure-policy-department-tag.png)
 
-Caption: Azure Policy assignment requiring the Department tag and a department-specific value.
+*Azure Policy assignment requiring the Department tag and a department-specific value.*
 
 ### Control Area
 
@@ -118,15 +106,11 @@ This screenshot supports policy-governance evidence in a simulated environment. 
 
 ## Evidence 4: Recovery Services Backup Policy
 
-### File
-
-```text
-images/recovery-services-backup-policy.png
-```
+### Evidence
 
 ![Recovery Services backup policy evidence](../images/recovery-services-backup-policy.png)
 
-Caption: Recovery Services backup policy showing daily backup schedule, instant restore retention, and daily retention configuration.
+*Recovery Services backup policy showing daily backup schedule, instant restore retention, and daily retention configuration.*
 
 ### Control Area
 
