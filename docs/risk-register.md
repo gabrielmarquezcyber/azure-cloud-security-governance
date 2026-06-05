@@ -10,15 +10,15 @@ This is a public portfolio artifact for a simulated regulated cloud environment.
 
 ## Risk Summary
 
-| ID | Risk | Impact | Likelihood | Severity | Mitigation | Residual Risk |
+| ID | Risk | Impact | Likelihood | Severity | Primary Mitigation | Residual Risk |
 |---|---|---:|---:|---:|---|---|
-| R-001 | Overly broad Azure access | High | Medium | High | Department-scoped resource groups and Azure RBAC assignments | Medium |
-| R-002 | Cross-department resource visibility | Medium | Medium | Medium | Separate resource groups and ownership tagging | Low-Medium |
+| R-001 | Overly broad Azure access | High | Medium | High | Department-scoped resource groups and scoped Azure RBAC | Medium |
+| R-002 | Cross-department resource visibility | Medium | Medium | Medium | Departmental resource separation and ownership tagging | Low-Medium |
 | R-003 | Permanent deletion of keys or secrets | High | Low-Medium | High | Key Vault soft delete and purge protection | Low-Medium |
-| R-004 | Unverified backup recoverability | High | Medium | High | Recovery Services vault and documented backup policy | Medium |
+| R-004 | Unverified backup recoverability | High | Medium | High | Recovery Services backup policy documentation | Medium |
 | R-005 | Unowned or poorly classified resources | Medium | High | Medium | Azure Policy Department tag enforcement | Low-Medium |
-| R-006 | Weak audit evidence | Medium | Medium | Medium | Evidence summary, control mapping, and published screenshots | Low |
-| R-007 | Compliance control gaps during migration | High | Medium | High | NIST/FISMA/PCI-oriented control mapping and recommendations | Medium |
+| R-006 | Weak audit evidence | Medium | Medium | Medium | Control mapping, risk documentation, and published evidence | Low |
+| R-007 | Compliance control gaps during migration | High | Medium | High | NIST/FISMA/PCI-oriented control mapping and risk notes | Medium |
 
 ## R-001: Overly Broad Azure Access
 
@@ -35,17 +35,16 @@ Excessive access increases the risk of unauthorized modification, accidental cha
 - Use department-scoped resource groups.
 - Assign Azure RBAC roles at the narrowest practical scope.
 - Avoid broad subscription-level access unless operationally justified.
-- Document role assignments for audit review.
+- Review role assignments as part of recurring access governance.
 
-### Evidence
+### Primary Evidence
 
-- [RBAC evidence summary](evidence-summary.md#evidence-1-rbac-resource-group-scope).
-- [Azure RBAC and resource scope control mapping](control-mapping.md#azure-rbac-and-resource-scope).
-- [Azure RBAC and resource scope control mapping](control-mapping.md#azure-rbac-and-resource-scope).
+- [RBAC resource group scope evidence](evidence-summary.md#evidence-1-rbac-resource-group-scope)
+- [Azure RBAC and resource scope control mapping](control-mapping.md#azure-rbac-and-resource-scope)
 
 ### Residual Risk
 
-Medium. Access reviews and identity governance remain recurring operational requirements.
+Medium. Scoped RBAC reduces excessive access, but recurring access review is still required.
 
 ## R-002: Cross-Department Resource Visibility
 
@@ -55,23 +54,23 @@ Departments may view or interact with resources outside their operational respon
 
 ### Impact
 
-Cross-department visibility can violate least privilege and complicate audit boundaries.
+Cross-department visibility can violate least privilege, complicate audit boundaries, and increase the blast radius of accidental or unauthorized changes.
 
 ### Mitigation
 
 - Separate departmental workloads by resource group.
 - Use role assignments aligned to department ownership.
-- Use Department tags for ownership clarity.
+- Use Department tags to improve ownership visibility.
 
-### Evidence
+### Primary Evidence
 
-- [RBAC evidence summary](evidence-summary.md#evidence-1-rbac-resource-group-scope).
-- [Azure Policy Department tag evidence summary](evidence-summary.md#evidence-3-azure-policy-department-tag).
-- [Azure RBAC and resource scope control mapping](control-mapping.md#azure-rbac-and-resource-scope) and [Azure Policy tag governance control mapping](control-mapping.md#azure-policy-tag-governance).
+- [RBAC resource group scope evidence](evidence-summary.md#evidence-1-rbac-resource-group-scope)
+- [Azure Policy Department tag evidence](evidence-summary.md#evidence-3-azure-policy-department-tag)
+- [Azure Policy tag governance control mapping](control-mapping.md#azure-policy-tag-governance)
 
 ### Residual Risk
 
-Low-Medium. Scoped access and ownership tagging reduce exposure, but resource drift still requires review.
+Low-Medium. Scoped access and ownership tagging reduce exposure, but resource drift still requires periodic review.
 
 ## R-003: Permanent Deletion of Keys or Secrets
 
@@ -87,13 +86,13 @@ Loss of keys or secrets could disrupt applications, recovery processes, encrypti
 
 - Enable Key Vault soft delete.
 - Enable purge protection.
-- Keep recovery settings documented.
+- Document recovery settings.
 - Restrict Key Vault administrative access.
 
-### Evidence
+### Primary Evidence
 
-- [Key Vault recovery protection evidence summary](evidence-summary.md#evidence-2-key-vault-soft-delete-and-purge-protection).
-- [Azure Key Vault recovery protection control mapping](control-mapping.md#azure-key-vault-recovery-protection).
+- [Key Vault recovery protection evidence](evidence-summary.md#evidence-2-key-vault-soft-delete-and-purge-protection)
+- [Azure Key Vault recovery protection control mapping](control-mapping.md#azure-key-vault-recovery-protection)
 
 ### Residual Risk
 
@@ -111,20 +110,18 @@ Unclear backup posture increases business impact from ransomware, accidental del
 
 ### Mitigation
 
-- Configure or document a Recovery Services vault.
-- Document backup policy schedule and retention.
-- Align backup design to recovery objectives.
+- Configure and document a Recovery Services backup policy.
+- Align backup schedule and retention to recovery objectives.
 - Treat restore testing as a separate validation requirement.
 
-### Evidence
+### Primary Evidence
 
-- [Recovery Services backup policy evidence summary](evidence-summary.md#evidence-4-recovery-services-backup-policy).
-- [Evidence summary](evidence-summary.md).
-- [Recovery Services backup governance control mapping](control-mapping.md#recovery-services-backup-governance).
+- [Recovery Services backup policy evidence](evidence-summary.md#evidence-4-recovery-services-backup-policy)
+- [Recovery Services backup governance control mapping](control-mapping.md#recovery-services-backup-governance)
 
 ### Residual Risk
 
-Medium. Backup configuration evidence is useful, but restore validation would be needed to reduce this risk further.
+Medium. Backup policy evidence supports recovery planning, but restore validation would be needed to reduce this risk further.
 
 ## R-005: Unowned or Poorly Classified Resources
 
@@ -143,10 +140,10 @@ Unowned resources create operational confusion and can delay incident response, 
 - Review noncompliant resources.
 - Use tagging to support inventory, ownership, and triage.
 
-### Evidence
+### Primary Evidence
 
-- [Azure Policy Department tag evidence summary](evidence-summary.md#evidence-3-azure-policy-department-tag).
-- [Azure Policy tag governance control mapping](control-mapping.md#azure-policy-tag-governance).
+- [Azure Policy Department tag evidence](evidence-summary.md#evidence-3-azure-policy-department-tag)
+- [Azure Policy tag governance control mapping](control-mapping.md#azure-policy-tag-governance)
 
 ### Residual Risk
 
@@ -165,15 +162,14 @@ Weak evidence makes audit review, incident review, handoffs, and control validat
 ### Mitigation
 
 - Maintain control mapping.
-- Maintain risk register.
-- Maintain the [evidence summary](evidence-summary.md).
-- Use professional screenshot captions.
+- Maintain risk documentation.
+- Maintain evidence summaries with published screenshots.
 - Keep public evidence focused on the control claim being demonstrated.
 
-### Evidence
+### Primary Evidence
 
-- [Control mapping](control-mapping.md), [risk register](risk-register.md), and [evidence summary](evidence-summary.md).
-- Published evidence screenshots linked from `docs/evidence-summary.md`.
+- [Control mapping](control-mapping.md)
+- [Evidence summary](evidence-summary.md)
 
 ### Residual Risk
 
@@ -196,11 +192,10 @@ Compliance gaps can affect regulated operations, audit readiness, security postu
 - Maintain risk-based remediation notes.
 - Treat formal compliance validation as a separate organization-specific process.
 
-### Evidence
+### Primary Evidence
 
-- [Control mapping](control-mapping.md).
-- [Evidence summary](evidence-summary.md).
-- Risk recommendations documented in this register.
+- [NIST SP 800-53 control family alignment](control-mapping.md#nist-sp-800-53-control-family-alignment)
+- [PCI / FISMA-oriented governance notes](control-mapping.md#pci--fisma-oriented-governance-notes)
 
 ### Residual Risk
 
@@ -210,13 +205,9 @@ Medium. Formal compliance validation would require organization-specific scope, 
 
 Severity is estimated using a simple qualitative model:
 
-```text
 Severity = business impact + likelihood + control maturity
-```
 
-This is not a formal quantitative risk model.
-
-It demonstrates structured analyst reasoning for a simulated cloud governance scenario.
+This is not a formal quantitative risk model. It demonstrates structured analyst reasoning for a simulated cloud governance scenario.
 
 ## Operational Use
 
@@ -242,7 +233,6 @@ This risk register supports security operations and governance review by helping
 
 Future extensions may add:
 
-- Additional Azure evidence for each risk area.
 - Defender for Cloud posture-review documentation.
 - Azure Activity Log review notes.
 - Example KQL queries for governance or identity review.
