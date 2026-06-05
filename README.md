@@ -6,7 +6,46 @@ This project documents a simulated Azure cloud security governance implementatio
 
 The goal is to demonstrate Azure identity governance, least-privilege access design, key protection, backup readiness, policy-based tagging, and audit-defensible risk documentation.
 
-This repository is based on a simulated environment and cleaned implementation notes. It does not represent production administration of a live enterprise tenant.
+This repository is based on a simulated environment and public-safe implementation documentation. It does not represent production administration of a live enterprise tenant.
+
+## Reviewer Proof Map
+
+This repository is designed to be reviewed quickly. Start here:
+
+| Proof Area | What It Shows | Start Here |
+|---|---|---|
+| Azure RBAC / Least Privilege | Role assignment scoped to the selected resource group instead of broad tenant-wide access. | [RBAC evidence](docs/evidence-summary.md#evidence-1-rbac-resource-group-scope), [control mapping](docs/control-mapping.md#azure-rbac-and-resource-scope) |
+| Key Vault Recovery Protection | Soft delete and purge protection configured to reduce the risk of permanent key or secret loss. | [Key Vault evidence](docs/evidence-summary.md#evidence-2-key-vault-soft-delete-and-purge-protection), [control mapping](docs/control-mapping.md#azure-key-vault-recovery-protection) |
+| Azure Policy Tag Governance | Department tag policy used to support ownership, triage, and governance visibility. | [Azure Policy evidence](docs/evidence-summary.md#evidence-3-azure-policy-department-tag), [control mapping](docs/control-mapping.md#azure-policy-tag-governance) |
+| Backup and Recovery Readiness | Recovery Services backup policy with documented schedule and retention settings. | [Backup policy evidence](docs/evidence-summary.md#evidence-4-recovery-services-backup-policy), [control mapping](docs/control-mapping.md#recovery-services-backup-governance) |
+| Risk and Compliance Reasoning | Cloud governance risks mapped to mitigations, residual risk, and NIST SP 800-53 control families. | [Risk register](docs/risk-register.md), [NIST control-family alignment](docs/control-mapping.md#nist-sp-800-53-control-family-alignment) |
+
+## Visual Proof
+
+### Azure RBAC scope
+
+![RBAC resource group scope evidence](images/rbac-resource-group-scope.png)
+
+*Azure RBAC role assignment showing Virtual Machine Contributor access scoped to the selected resource group.*
+
+### Key Vault recovery protection
+
+![Key Vault recovery protection evidence](images/key-vault-soft-delete-purge-protection.png)
+
+*Azure Key Vault recovery settings showing soft delete enabled and purge protection configured.*
+
+### Azure Policy Department tag governance
+
+![Azure Policy Department tag evidence](images/azure-policy-department-tag.png)
+
+*Azure Policy assignment requiring the Department tag and a department-specific value.*
+
+### Recovery Services backup policy
+
+![Recovery Services backup policy evidence](images/recovery-services-backup-policy.png)
+
+*Recovery Services backup policy showing daily backup schedule, instant restore retention, and daily retention configuration.*
+
 
 ## Scenario
 
