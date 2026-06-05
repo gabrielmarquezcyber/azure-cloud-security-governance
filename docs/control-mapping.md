@@ -10,10 +10,10 @@ This is not a certification claim. It is a public-safe control-mapping artifact 
 
 | Security Objective | Azure Implementation | Control Theme | Evidence |
 |---|---|---|---|
-| Limit access by department | Department-scoped resource groups with Azure RBAC assignments | Least privilege, access control, separation of duties | RBAC screenshot or implementation notes |
-| Protect keys and secrets from permanent deletion | Azure Key Vault soft delete and purge protection | Key management, recovery protection, resilience | Key Vault properties screenshot or implementation notes |
-| Improve recovery readiness | Recovery Services vault and backup policy | Contingency planning, backup, recovery readiness | Backup policy screenshot or implementation notes |
-| Improve resource ownership visibility | Azure Policy requiring Department tag | Governance, inventory, audit readiness | Azure Policy screenshot or implementation notes |
+| Limit access by department | Department-scoped resource groups with Azure RBAC assignments | Least privilege, access control, separation of duties | [Published RBAC evidence](evidence-summary.md#evidence-1-rbac-resource-group-scope) |
+| Protect keys and secrets from permanent deletion | Azure Key Vault soft delete and purge protection | Key management, recovery protection, resilience | [Published Key Vault recovery evidence](evidence-summary.md#evidence-2-key-vault-soft-delete-and-purge-protection) |
+| Improve recovery readiness | Recovery Services vault and backup policy | Contingency planning, backup, recovery readiness | [Published Recovery Services backup policy evidence](evidence-summary.md#evidence-4-recovery-services-backup-policy) |
+| Improve resource ownership visibility | Azure Policy requiring Department tag | Governance, inventory, audit readiness | [Published Azure Policy Department tag evidence](evidence-summary.md#evidence-3-azure-policy-department-tag) |
 | Support audit-defensible documentation | Control mapping, risk register, evidence summary | Auditability, accountability, control validation | Repository documentation |
 
 ## Azure RBAC and Resource Scope
@@ -158,4 +158,5 @@ This control map supports security operations by connecting Azure configuration 
 This document is supported by the published evidence screenshots linked from `docs/evidence-summary.md`.
 
 Specific configuration claims are supported by the published screenshots or framed as simulated design rationale.
+
 
