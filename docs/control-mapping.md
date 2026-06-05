@@ -1,4 +1,4 @@
-﻿# Control Mapping
+# Control Mapping
 
 ## Purpose
 
@@ -110,14 +110,15 @@ This section maps project themes to NIST SP 800-53 control families at a high le
 
 This is control-family alignment only. It is not a formal assessment, authorization, certification, or compliance claim.
 
-| NIST Control Family | Project Relevance | Azure Evidence |
+| NIST Control Family | Project Relevance | Implemented Azure Control / Artifact |
 |---|---|---|
-| AC - Access Control | RBAC assignments and least-privilege scope | Resource group scoped role assignments |
-| AU - Audit and Accountability | Evidence summary and audit-defensible notes | Documentation and screenshot captions |
-| CP - Contingency Planning | Backup policy and recovery readiness | Recovery Services vault evidence |
-| IA - Identification and Authentication | Entra ID identity context for RBAC | Role assignment identity context |
-| SC - System and Communications Protection | Key Vault recovery and protection controls | Key Vault configuration |
-| CM - Configuration Management | Azure Policy tag enforcement | Policy assignment evidence |
+| AC - Access Control | Limits excessive access and supports least privilege. | Resource-group scoped Azure RBAC assignment. |
+| AU - Audit and Accountability | Supports reviewable security decisions and audit-defensible documentation. | Control mapping, risk register, and published evidence summary. |
+| CP - Contingency Planning | Supports backup planning and recovery-readiness review. | Recovery Services backup policy with documented schedule and retention. |
+| IA - Identification and Authentication | Connects identity context to scoped authorization decisions. | Entra ID identity context used with Azure RBAC role assignment. |
+| SC - System and Communications Protection | Supports protection and recoverability of key-management assets. | Azure Key Vault soft delete and purge protection. |
+| CM - Configuration Management | Supports consistent resource governance and ownership metadata. | Azure Policy assignment requiring Department tag governance. |
+
 
 ## PCI / FISMA-Oriented Governance Notes
 
@@ -158,5 +159,3 @@ This control map supports security operations by connecting Azure configuration 
 This document is supported by the published evidence screenshots linked from `docs/evidence-summary.md`.
 
 Specific configuration claims are supported by the published screenshots or framed as simulated design rationale.
-
-
